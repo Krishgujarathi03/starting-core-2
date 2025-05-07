@@ -8,14 +8,14 @@ const LandingPage = () => {
         <nav className="flex items-center p-6 text-sm justify-start gap-12 border-b border-gray-700">
           <div className="font-bold text-lg text-red-600">▰</div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-red-600">
+            <a href="/about" className="hover:text-red-600">
               ABOUT
             </a>
-            <a href="#" className="hover:text-red-600">
-              GALLERY
+            <a href="/our-process" className="hover:text-red-600">
+              OUR PROCESS
             </a>
-            <a href="#" className="hover:text-red-600">
-              CONTACTS
+            <a href="/our-clients" className="hover:text-red-600">
+              OUR CLIENTS
             </a>
           </div>
         </nav>
