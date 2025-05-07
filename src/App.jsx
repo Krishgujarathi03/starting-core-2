@@ -2,7 +2,7 @@
 import {createBrowserRouter , RouterProvider } from "react-router-dom";
 
 import React from "react";
-import LandingPage from "./components/LandingPage";
+
 
 // importing components 
 
