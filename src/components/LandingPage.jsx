@@ -27,12 +27,11 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="relative md:w-1/2 mt-10 md:mt-0">
-            <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-red-600 -z-10" />
+          <div className="relative md:w-1/2 xs:h-[40vh] lg:h-auto mt-10 md:mt-0">
             <img
               src={img1}
               alt="Img"
-              className="w-full h-auto object-contain drop-shadow-2xl"
+              className="w-full h-full object-contain drop-shadow-2xl"
             />
           </div>
         </div>
