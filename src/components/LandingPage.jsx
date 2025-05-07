@@ -1,5 +1,7 @@
 import React from "react";
 import img1 from "../assets/img1.png";
+import logo from "../assets/logo.png";
+
 import Navbar from "./CommonComponents/Navbar";
 
 const LandingPage = () => {
@@ -7,7 +9,9 @@ const LandingPage = () => {
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
       <div className="bg-[#1a1a1a] rounded-2xl shadow-[0_0_10px_2px_rgba(255,255,255,0.3)] w-full max-w-6xl overflow-hidden">
         <nav className="flex items-center p-6 text-sm justify-start gap-12 border-b border-gray-700">
-          <div className="font-bold text-lg text-red-600">▰</div>
+          <div className="font-bold text-lg text-red-600">
+            <img src={logo} alt="company logo" />
+          </div>
 
           <Navbar />
         </nav>
