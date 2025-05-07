@@ -1,51 +1,23 @@
-
-import {createBrowserRouter , RouterProvider } from "react-router-dom";
-
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// importing components 
-
-import { Home } from "./components/Home.jsx";
-import { About } from "./components/About.jsx";
-import { OurProcess } from "./components/OurProcess.jsx";
-import { OurClients } from "./components/OurClients.jsx";
+import About from "./components/About.jsx";
+import OurProcess from "./components/OurProcess.jsx";
+import OurClients from "./components/OurClients.jsx";
 import { OurFounder } from "./components/OurFounder.jsx";
 import { Cta } from "./components/Cta.jsx";
+import LandingPage from "./components/LandingPage.jsx";
 
 const App = () => {
-
-  const routes = createBrowserRouter([
-    {
-      path : "/",
-      element : <Home />
-    },
-    {
-      path : "/about",
-      element : <About />
-    },
-    {
-      path : "/our-process",
-      element : <OurProcess />
-    },
-    {
-      path : "/our-clients",
-      element : <OurClients />
-    },
-    {
-      path : "/founder",
-      element : <OurFounder />
-    },
-    {
-      path : "/build-your-legacy",
-      element : <Cta />
-    }
-  ]);
-
-
-  return( 
-
-    <RouterProvider router={routes} />
-
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/our-process" element={<OurProcess />} />
+      <Route path="/our-clients" element={<OurClients />} />
+      <Route path="/founder" element={<OurFounder />} />
+      <Route path="/build-your-legacy" element={<Cta />} />
+    </Routes>
   );
 };
 
