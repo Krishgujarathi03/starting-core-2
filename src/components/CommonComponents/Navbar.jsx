@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // optional: for icons
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full text-white p-4">
-      <div className="flex justify-between items-center max-w-6xl mx-auto">
+    <div className="w-full text-white">
+      <div className="flex justify-between items-center max-w-6xl mx-auto p-4">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <Link to="/">
+            <img src={logo} alt="Company Logo" className="h-10 w-auto" />
+          </Link>
+        </div>
+
         {/* Desktop menu */}
         <div className="hidden md:flex gap-6 text-xl">
           <Link to="/" className="hover:text-red-600">
@@ -40,7 +48,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col gap-4 mt-4 text-lg px-2">
+        <div className="md:hidden flex flex-col gap-4 mt-4 text-lg px-4">
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
@@ -85,7 +93,7 @@ const Navbar = () => {
           </Link>
         </div>
       )}
-    </nav>
+    </div>
   );
 };
 
