@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import About from "./components/About.jsx";
 import OurProcess from "./components/OurProcess.jsx";
