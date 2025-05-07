@@ -1,5 +1,6 @@
 import React from "react";
 import img1 from "../assets/img1.png";
+import { Link } from "react-router-dom";
 
 const OurProcess = () => {
   return (
@@ -8,15 +9,15 @@ const OurProcess = () => {
         <nav className="flex items-center p-6 text-sm justify-start gap-12 border-b border-gray-700">
           <div className="font-bold text-lg text-red-600">▰</div>
           <div className="flex gap-6">
-            <a href="/" className="hover:text-red-600">
+            <Link to="/" className="hover:text-red-600">
               HOME
-            </a>
-            <a href="/about" className="hover:text-red-600">
+            </Link>
+            <Link to="/about" className="hover:text-red-600">
               ABOUT
-            </a>
-            <a href="/our-clients" className="hover:text-red-600">
+            </Link>
+            <Link to="/our-clients" className="hover:text-red-600">
               OUR CLIENTS
-            </a>
+            </Link>
           </div>
         </nav>
 
