@@ -7,17 +7,6 @@ const About = () => {
       <div className="bg-[#1a1a1a] rounded-2xl shadow-[0_0_10px_2px_rgba(255,255,255,0.3)] w-full max-w-6xl overflow-hidden">
         <nav className="flex items-center p-6 text-sm justify-start gap-12 border-b border-gray-700">
           <div className="font-bold text-lg text-red-600">▰</div>
-          <div className="flex gap-6">
-            <a href="/" className="hover:text-red-600">
-              HOME
-            </a>
-            <a href="/our-process" className="hover:text-red-600">
-              OURPROCESS
-            </a>
-            <a href="/our-clients" className="hover:text-red-600">
-              OURCLIENTS
-            </a>
-          </div>
         </nav>
 
         <div className="flex flex-col md:flex-row items-center justify-between px-10 pb-10">
