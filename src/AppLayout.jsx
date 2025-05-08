@@ -6,7 +6,7 @@ const AppLayout = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <Outlet />
+      {/* <Outlet /> */}
     </>
   );
 };

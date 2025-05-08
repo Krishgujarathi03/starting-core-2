@@ -1,4 +1,4 @@
-import React from "react";
+
 import img1 from "../assets/img1.png";
 import Navbar from "./CommonComponents/Navbar";
 
@@ -25,13 +25,6 @@ const LandingPage = () => {
                 because we can, and because we love it.
               </span>
             </p>
-
-            <div className="flex items-center space-x-2 mt-4">
-              <button className="w-16 h-16 bg-transparent border border-white hover:bg-red-600 hover:text-white text-white rounded-full flex items-center justify-center text-xl">
-                →
-              </button>
-              <span className="text-white hover:text-red-600">See More</span>
-            </div>
           </div>
 
           <div className="relative md:w-1/2 xs:h-[40vh] lg:h-auto mt-8 md:mt-0">
