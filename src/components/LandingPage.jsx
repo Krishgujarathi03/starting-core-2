@@ -13,8 +13,10 @@ const LandingPage = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between px-10 pb-10">
           <div className="md:w-1/2">
-            <p className="text-gray-400 uppercase text-sm">Our Version</p>
-            <h1 className="text-5xl font-bold mt-2">DESIGN</h1>
+            <p className="text-gray-400 uppercase text-lg font-bold">
+              Our Version
+            </p>
+            <h1 className="text-red-500 text-5xl font-bold mt-2">DESIGN</h1>
             <p className="text-gray-400 mt-4 max-w-md">
               Our hobby is a modern and convenient design, the key to successful
               communication with the client.
