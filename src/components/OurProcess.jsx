@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "../assets/Our Process section/ourprocess.png";
+import img1 from "../assets/OurProcessSection/ourprocess.png";
 
 const OurProcess = () => {
   return (
