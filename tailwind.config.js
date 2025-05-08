@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': '300px',
-      }
+        xs: "300px",
+      },
     },
   },
   plugins: [],

@@ -1,6 +1,5 @@
 import React from "react";
 import img1 from "../assets/img1.png";
-
 import Navbar from "./CommonComponents/Navbar";
 
 const LandingPage = () => {
@@ -16,17 +15,26 @@ const LandingPage = () => {
             <p className="text-gray-400 uppercase text-lg font-bold">
               Our Version
             </p>
-            <h1 className="text-red-500 text-5xl font-bold mt-2">DESIGN</h1>
-            <p className="text-gray-400 mt-4 max-w-md">
-              Our hobby is a modern and convenient design, the key to successful
-              communication with the client.
+            <h1 className="text-red-500 text-5xl font-bold mt-2 mb-6">
+              DESIGN
+            </h1>
+            <p>We work with celebrities to build iconic images.</p>
+            <p>We work with labels and brands to craft viral campaigns.</p>
+            <p>
+              And in our free time, we solve real-world problems —<br />
+              <span className="text-red-500 font-semibold">
+                because we can, and because we love it.
+              </span>
             </p>
+
             <div className="flex items-center space-x-2 mt-5">
               <button className="w-16 h-16 bg-transparent border border-white hover:bg-red-600 hover:text-white text-white rounded-full flex items-center justify-center">
                 →
               </button>
               <span className="text-white hover:text-red-600">See More</span>
             </div>
+
+            <div className="mt-8 space-y-3 text-sm text-gray-300 max-w-md leading-relaxed"></div>
           </div>
 
           <div className="relative md:w-1/2 xs:h-[40vh] lg:h-auto mt-10 md:mt-0">
