@@ -22,7 +22,7 @@ const OurClients = () => {
       <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
         {/* Left Column: Content */}
         <div className="md:w-1/2 2xl:pe-[2rem]">
-          <h1 className="text-7xl font-avenir mb-1 leading-tight text-center text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-avenir mb-1 leading-tight text-center text-white">
             Who We Work With
           </h1>
 
