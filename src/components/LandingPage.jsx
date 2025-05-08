@@ -1,6 +1,4 @@
-import React from "react";
 import img1 from "../assets/img1.png";
-import Navbar from "./CommonComponents/Navbar";
 
 const LandingPage = () => {
   return (
@@ -9,7 +7,7 @@ const LandingPage = () => {
         <Navbar />
       </nav>
 
-      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-10 gap-8 w-full">
+      <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
         {/* Left Column */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-avenir mb-4 leading-tight">
