@@ -3,10 +3,6 @@ import img1 from "../assets/img1.png";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white w-full">
-      <nav className="flex items-center p-6 text-sm justify-start gap-12 border-b border-gray-700 w-full">
-        <Navbar />
-      </nav>
-
       <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
         {/* Left Column */}
         <div className="md:w-1/2 text-center md:text-left">
