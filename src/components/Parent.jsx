@@ -3,7 +3,6 @@
 // importing components
 
 import Navbar from "./CommonComponents/Navbar.jsx";
-
 import LandingPage from "./LandingPage.jsx";
 import About from "./About.jsx";
 import OurProcess from "./OurProcess.jsx";
@@ -24,7 +23,6 @@ export default function Parent()
                 <OurFounder />
                 <Cta />
             </div>
-            
         </>
     );
 }

@@ -10,6 +10,8 @@ export default {
       },
       screens: {
         xs: "300px",
+        xs390 : "390px",
+        xs430 : "430px"
       },
     },
   },
