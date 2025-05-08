@@ -4,8 +4,8 @@ import Navbar from "./CommonComponents/Navbar";
 
 const OurFounder = () => {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between px-10 pb-10 mt-6">
+    <div className="min-h-screen bg-[#1a1a1a] text-white w-full p-4">
+      <div className="w-full flex flex-col md:flex-row items-center justify-between px-10 pb-10 mt-6">
         <div className="md:w-1/2">
           <h2 className="font-avenir text-6xl font-bold mb-6 text-white tracking-wide text-center md:text-left">
             Meet the Visionary Behind BonBern
