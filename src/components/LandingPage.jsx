@@ -4,43 +4,40 @@ import Navbar from "./CommonComponents/Navbar";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
-      <div className="bg-[#1a1a1a] rounded-2xl shadow-[0_0_10px_2px_rgba(255,255,255,0.3)] w-full max-w-6xl overflow-hidden">
+    <div className="min-h-screen bg-[#1a1a1a] text-white flex items-center justify-center p-4">
+      <div className="w-full max-w-6xl">
         <nav className="flex items-center p-6 text-sm justify-start gap-12 border-b border-gray-700">
           <Navbar />
         </nav>
 
-        <div className="flex flex-col md:flex-row items-center justify-between px-10 pb-10">
+        <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8">
           <div className="md:w-1/2">
-            <p className="text-gray-400 uppercase text-lg font-bold">
-              Our Version
-            </p>
-            <h1 className="text-red-500 text-5xl font-bold mt-2 mb-6">
-              DESIGN
+            <h1 className="text-6xl font-avenir mb-1 leading-tight">
+              We work with celebrities to build iconic images.
             </h1>
-            <p>We work with celebrities to build iconic images.</p>
-            <p>We work with labels and brands to craft viral campaigns.</p>
-            <p>
-              And in our free time, we solve real-world problems —<br />
-              <span className="text-red-500 font-semibold">
+            <h2 className="text-xl font-playfair text-gray-200 mb-3">
+              We work with labels and brands to craft viral campaigns.
+            </h2>
+            <p className="text-lg font-lora text-gray-300">
+              And in our free time, we solve real-world problems —
+              <br />
+              <span className="text-gray-400">
                 because we can, and because we love it.
               </span>
             </p>
 
-            <div className="flex items-center space-x-2 mt-5">
-              <button className="w-16 h-16 bg-transparent border border-white hover:bg-red-600 hover:text-white text-white rounded-full flex items-center justify-center">
+            <div className="flex items-center space-x-2 mt-4">
+              <button className="w-16 h-16 bg-transparent border border-white hover:bg-red-600 hover:text-white text-white rounded-full flex items-center justify-center text-xl">
                 →
               </button>
               <span className="text-white hover:text-red-600">See More</span>
             </div>
-
-            <div className="mt-8 space-y-3 text-sm text-gray-300 max-w-md leading-relaxed"></div>
           </div>
 
-          <div className="relative md:w-1/2 xs:h-[40vh] lg:h-auto mt-10 md:mt-0">
+          <div className="relative md:w-1/2 xs:h-[40vh] lg:h-auto mt-8 md:mt-0">
             <img
               src={img1}
-              alt="Img"
+              alt="Design"
               className="w-full h-full object-contain drop-shadow-2xl"
             />
           </div>
