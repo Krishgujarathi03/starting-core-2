@@ -1,5 +1,5 @@
 import React from "react";
-import ctaImg from "../assets/cta/cta-section.jpg";
+import ctaImg from "../assets/cta/cta-section.png";
 
 const Cta = () => {
   return (
@@ -13,13 +13,13 @@ const Cta = () => {
             </h1>
 
             <h2 className="text-lg sm:text-xl font-playfair text-white text-center sm:text-left mb-4">
-              You’re not just launching a project — you’re shaping perception,
+              You're not just launching a project — you’re shaping perception,
               evoking emotion, and building something that outlasts the moment.
             </h2>
 
             <p className="text-base sm:text-lg font-lora text-white leading-relaxed text-justify px-4 sm:px-0 mb-6">
-              Whether it’s a bold brand, a movement with meaning, or a story
-              that cuts through the noise — we’re your creative allies from day
+              Whether it's a bold brand, a movement with meaning, or a story
+              that cuts through the noise — we're your creative allies from day
               one.
             </p>
 
@@ -27,7 +27,7 @@ const Cta = () => {
               Ready to redefine how the world sees you?
               <br />
               <span className="text-white">
-                Let’s build something unforgettable — together.
+                Let's build something unforgettable — together.
               </span>
             </p>
             <button className="mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full transition duration-300 shadow-lg">
