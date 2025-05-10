@@ -3,7 +3,10 @@ import ctaImg from "../assets/cta/cta-section.png";
 
 const Cta = () => {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white w-full p-4">
+    <div
+      id="get-started"
+      className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
+    >
       <div className="w-full">
         <div className="flex flex-col sm:flex-row items-center justify-between px-6 sm:px-10 py-8">
           {/* Left Column: Content */}

@@ -18,7 +18,10 @@ const partners = [
 
 const OurClients = () => {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white w-full p-4">
+    <div
+      id="who-we-work-with"
+      className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
+    >
       <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
         {/* Left Column: Content */}
         <div className="md:w-1/2 2xl:pe-[2rem]">

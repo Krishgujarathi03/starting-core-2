@@ -4,7 +4,10 @@ import Navbar from "./CommonComponents/Navbar";
 
 const OurFounder = () => {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white w-full p-4">
+    <div
+      id="founder"
+      className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
+    >
       <div className="w-full flex flex-col sm:flex-row items-center justify-between px-6 sm:px-10 pb-10 mt-6">
         <div className="sm:w-1/2">
           <h2 className="font-avenir text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-wide text-center sm:text-left">

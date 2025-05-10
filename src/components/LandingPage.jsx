@@ -2,7 +2,7 @@ import img1 from "../assets/img1.png";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white w-full">
+    <div id="home" className="min-h-screen bg-[#1a1a1a] text-white w-full">
       <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
         {/* Left Column */}
         <div className="md:w-1/2 text-center md:text-left">

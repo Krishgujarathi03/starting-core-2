@@ -3,7 +3,10 @@ import img1 from "../assets/AboutSectionImage/aboutUs.png";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white w-full px-4 sm:px-6 md:px-10 py-10">
+    <div
+      id="about-us"
+      className="min-h-screen bg-[#1a1a1a] text-white w-full px-4 sm:px-6 md:px-10 py-10"
+    >
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full">
         {/* Left Column */}
         <div className="md:w-1/2 text-center md:text-left">

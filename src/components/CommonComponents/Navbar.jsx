@@ -45,19 +45,21 @@ export default function Navbar() {
             >
               <ul className="text-center flex flex-col lg:flex-row lg:gap-12 gap-0 lg:w-full w-auto text-sm">
                 {[
-                  "Home",
-                  "About Us",
-                  "Our Process",
-                  "Who We Work With",
-                  "Founder",
-                  "Get Started",
-                ].map((label) => (
-                  <li
-                    key={label}
-                    className="lg:bg-transparent bg-gray-800 hover:text-red-600 cursor-pointer px-4 py-3"
-                    onClick={() => setOpen(false)}
-                  >
-                    {label}
+                  { label: "Home", id: "home" },
+                  { label: "About Us", id: "about-us" },
+                  { label: "Our Process", id: "our-process" },
+                  { label: "Who We Work With", id: "who-we-work-with" },
+                  { label: "Founder", id: "founder" },
+                  { label: "Get Started", id: "get-started" },
+                ].map(({ label, id }) => (
+                  <li key={id}>
+                    <a
+                      href={`#${id}`}
+                      onClick={() => setOpen(false)}
+                      className="lg:bg-transparent bg-gray-800 hover:text-red-600 cursor-pointer px-4 py-3 block"
+                    >
+                      {label}
+                    </a>
                   </li>
                 ))}
               </ul>
