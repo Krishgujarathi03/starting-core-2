@@ -1,26 +1,90 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import anime from "animejs/lib/anime.es.js";
 import founder from "../assets/Founder/Founder.png";
-import Navbar from "./CommonComponents/Navbar";
 
 const OurFounder = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const texts = section.querySelectorAll(".animate-founder-text");
+    const image = section.querySelector(".animate-founder-img");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Reset styles before reanimating
+          texts.forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = "translateY(30px) skewY(2deg)";
+          });
+          if (image) {
+            image.style.opacity = 0;
+            image.style.transform = "scale(0.9) rotate(-3deg)";
+          }
+
+          // Entry animation
+          anime
+            .timeline({ easing: "easeOutExpo", duration: 1000 })
+            .add({
+              targets: texts,
+              opacity: [0, 1],
+              translateY: [30, 0],
+              skewY: ["2deg", "0deg"],
+              delay: anime.stagger(150),
+            })
+            .add(
+              {
+                targets: image,
+                opacity: [0, 1],
+                scale: [0.9, 1],
+                rotate: ["-3deg", "0deg"],
+                duration: 1200,
+                easing: "easeOutElastic(1, .8)",
+              },
+              "-=800"
+            );
+        } else {
+          // Exit animation (optional: fade out instantly)
+          texts.forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = "translateY(30px) skewY(2deg)";
+          });
+          if (image) {
+            image.style.opacity = 0;
+            image.style.transform = "scale(0.9) rotate(-3deg)";
+          }
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div
+      ref={sectionRef}
       id="founder"
       className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
     >
       <div className="w-full flex flex-col sm:flex-row items-center justify-between px-6 sm:px-10 pb-10 mt-6">
         <div className="sm:w-1/2">
-          <h2 className="font-avenir text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-wide text-center sm:text-left">
+          <h2 className="animate-founder-text font-avenir text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-wide text-center sm:text-left">
             Meet the Visionary Behind BonBern
           </h2>
-          <p className="font-playfair text-lg sm:text-xl mb-8 text-white leading-relaxed text-center sm:text-left max-w-xl">
-            <strong className="text-3xl text-white">
+          <p className="animate-founder-text font-playfair text-lg sm:text-xl mb-8 leading-relaxed text-center sm:text-left max-w-xl">
+            <strong className="text-3xl">
               Aakashraj Ambre <br />
             </strong>
             <br />· Founder · Behavioral Strategist · Perception Architect
           </p>
-
-          <p className="font-lora text-base sm:text-lg text-white mb-4 text-center sm:text-left">
+          <p className="animate-founder-text font-lora text-base sm:text-lg mb-4 text-center sm:text-left">
             Aakashraj blends over a decade of experience in advertising,
             celebrity marketing, and psychology-driven strategy.
             <br />
@@ -29,7 +93,7 @@ const OurFounder = () => {
               shape how they are seen, heard, and remembered.
             </strong>
           </p>
-          <p className="font-lora text-base sm:text-lg text-white mb-4 text-center sm:text-left">
+          <p className="animate-founder-text font-lora text-base sm:text-lg mb-4 text-center sm:text-left">
             From crafting iconic public personas to launching culture-shifting
             campaigns, his approach combines{" "}
             <strong> behavioral science, creative storytelling</strong>, and a
@@ -38,9 +102,7 @@ const OurFounder = () => {
           </p>
         </div>
 
-        {/* Right Column: Founder Image with blur effect */}
         <div className="md:w-1/2 w-full max-w-[500px] relative mt-10 sm:mt-0">
-          {/* Blurred background image */}
           <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
             <img
               src={founder}
@@ -48,12 +110,10 @@ const OurFounder = () => {
               className="w-full h-full object-cover scale-110 opacity-60 brightness-[1.2] blur-3xl rounded-lg"
             />
           </div>
-
-          {/* Foreground image */}
           <img
             src={founder}
             alt="Founder"
-            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl rounded-lg"
+            className="animate-founder-img relative z-10 w-full h-auto object-contain drop-shadow-2xl rounded-lg"
           />
         </div>
       </div>
