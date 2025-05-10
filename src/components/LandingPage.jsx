@@ -32,7 +32,7 @@ const LandingPage = () => {
                 targets: el.querySelector(".animate-img"),
                 scale: [0.8, 1],
                 opacity: [0, 1],
-                duration: 1000,
+                duration: 300,
               },
               "-=400"
             );
