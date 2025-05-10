@@ -35,12 +35,11 @@ const OurFounder = () => {
           </p>
         </div>
 
-        <div className="relative sm:w-1/2 mt-10 sm:mt-0 flex justify-center">
-          <div className="absolute top-0 right-0 w-[200px] sm:w-[250px] h-[200px] sm:h-[250px] rounded-full bg-white -z-10" />
+        <div className="md:w-1/2 w-full max-w-[500px]">
           <img
             src={founder}
             alt="Founder"
-            className="w-full h-auto object-contain drop-shadow-2xl rounded-xl transition-transform duration-300 hover:scale-105"
+            className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
           />
         </div>
       </div>

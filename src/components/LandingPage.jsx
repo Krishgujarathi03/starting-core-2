@@ -22,11 +22,11 @@ const LandingPage = () => {
         </div>
 
         {/* Right Column */}
-        <div className="relative md:w-1/2 w-full max-w-[500px]">
+        <div className="md:w-1/2 w-full max-w-[500px]">
           <img
             src={img1}
-            alt="Design"
-            className="w-full h-auto object-contain drop-shadow-2xl"
+            alt="HeroImg"
+            className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
           />
         </div>
       </div>

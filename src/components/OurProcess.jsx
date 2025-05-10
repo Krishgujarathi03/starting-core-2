@@ -51,7 +51,7 @@ const OurProcess = () => {
         </div>
 
         {/* Right Column: Image */}
-        <div className="md:w-1/2 w-full max-w-[500px] mt-10 md:mt-0">
+        <div className="md:w-1/2 w-full max-w-[500px]">
           <img
             src={img1}
             alt="Our Process"

@@ -52,12 +52,11 @@ const OurClients = () => {
         </div>
 
         {/* Right Column: Image */}
-        <div className="relative md:w-1/2 mt-10 md:mt-0 flex justify-center">
-          <div className="absolute top-0 right-0 w-[250px] h-[250px] rounded-full bg-white -z-10" />
+        <div className="md:w-1/2 w-full max-w-[500px]">
           <img
             src={img1}
             alt="Our Clients"
-            className="w-full h-auto object-contain drop-shadow-2xl rounded-xl"
+            className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
           />
         </div>
       </div>
