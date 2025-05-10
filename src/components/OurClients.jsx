@@ -22,18 +22,37 @@ const OurClients = () => {
       id="who-we-work-with"
       className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
     >
-      <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
-        {/* Left Column: Content */}
-        <div className="md:w-1/2 2xl:pe-[2rem]">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-avenir mb-1 leading-tight text-center text-white">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
+        {/* Left Column: Image with blur effect */}
+        <div className="md:w-1/2 w-full max-w-[500px] relative">
+          {/* Blurred background image */}
+          <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
+            <img
+              src={img1}
+              alt="blur-bg"
+              className="w-full h-full object-cover scale-110 opacity-60 brightness-[1.4] blur-3xl rounded-lg"
+            />
+          </div>
+
+          {/* Foreground image */}
+          <img
+            src={img1}
+            alt="Our Clients"
+            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl rounded-lg"
+          />
+        </div>
+
+        {/* Right Column: Content */}
+        <div className="md:w-1/2 2xl:pe-[2rem] mt-10 md:mt-0">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-avenir mb-1 leading-tight text-left text-white">
             Who We Work With
           </h1>
 
-          <h2 className="font-bold text-xl font-playfair text-white text-center mb-4">
+          <h2 className="font-bold text-xl font-playfair text-white text-left mb-4">
             The best partnerships are built on trust — and results.
           </h2>
 
-          <p className="text-lg font-lora text-white leading-relaxed text-justify px-2 md:px-0 mb-8">
+          <p className="text-lg font-lora text-white leading-relaxed text-justify mb-8">
             Over the years, we've collaborated with some of the most influential
             names across music, media, and brands.
           </p>
@@ -52,15 +71,6 @@ const OurClients = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Right Column: Image */}
-        <div className="md:w-1/2 w-full max-w-[500px]">
-          <img
-            src={img1}
-            alt="Our Clients"
-            className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
-          />
         </div>
       </div>
     </div>

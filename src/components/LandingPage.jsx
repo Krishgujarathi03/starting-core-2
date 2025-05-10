@@ -21,12 +21,22 @@ const LandingPage = () => {
           </p>
         </div>
 
-        {/* Right Column */}
-        <div className="md:w-1/2 w-full max-w-[500px]">
+        {/* Right Column with blur effect */}
+        <div className="md:w-1/2 w-full max-w-[500px] relative">
+          {/* Blurred background image */}
+          <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
+            <img
+              src={img1}
+              alt="blur-bg"
+              className="w-full h-full object-cover scale-110 opacity-60 brightness-[1.6] blur-3xl rounded-lg"
+            />
+          </div>
+
+          {/* Foreground image */}
           <img
             src={img1}
             alt="HeroImg"
-            className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
+            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl rounded-lg"
           />
         </div>
       </div>

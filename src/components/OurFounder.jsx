@@ -38,11 +38,22 @@ const OurFounder = () => {
           </p>
         </div>
 
-        <div className="md:w-1/2 w-full max-w-[500px]">
+        {/* Right Column: Founder Image with blur effect */}
+        <div className="md:w-1/2 w-full max-w-[500px] relative mt-10 sm:mt-0">
+          {/* Blurred background image */}
+          <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
+            <img
+              src={founder}
+              alt="blur-bg"
+              className="w-full h-full object-cover scale-110 opacity-60 brightness-[1.2] blur-3xl rounded-lg"
+            />
+          </div>
+
+          {/* Foreground image */}
           <img
             src={founder}
             alt="Founder"
-            className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
+            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl rounded-lg"
           />
         </div>
       </div>
