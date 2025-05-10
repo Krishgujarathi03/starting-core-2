@@ -73,6 +73,7 @@ const About = () => {
       ref={sectionRef}
       className="min-h-screen bg-[#1a1a1a] text-white w-full px-4 sm:px-6 md:px-10 py-10 overflow-x-hidden"
     >
+      
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
         {/* Left Column */}
         <div
@@ -122,6 +123,7 @@ const About = () => {
           </p>
         </div>
       </div>
+
     </div>
   );
 };

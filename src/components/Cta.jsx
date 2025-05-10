@@ -1,4 +1,4 @@
-import React from "react";
+
 import ctaImg from "../assets/cta/cta-section.png";
 
 const Cta = () => {

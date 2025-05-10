@@ -51,7 +51,7 @@ const LandingPage = () => {
     <div
       id="home"
       ref={containerRef}
-      className="min-h-screen bg-[#1a1a1a] text-white w-full"
+      className="min-h-screen bg-[#1a1a1a] text-white w-full xs:pt-[8rem] "
     >
       <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
         {/* Left Column */}
