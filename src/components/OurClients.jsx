@@ -26,7 +26,7 @@ const OurClients = () => {
             Who We Work With
           </h1>
 
-          <h2 className="text-xl font-playfair text-white text-center mb-4">
+          <h2 className="font-bold text-xl font-playfair text-white text-center mb-4">
             The best partnerships are built on trust — and results.
           </h2>
 

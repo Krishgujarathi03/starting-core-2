@@ -11,28 +11,27 @@ const OurFounder = () => {
             Meet the Visionary Behind BonBern
           </h2>
           <p className="font-playfair text-lg sm:text-xl mb-8 text-white leading-relaxed text-center sm:text-left max-w-xl">
-            <strong className="text-xl text-white">
-              Aakashraj Ambre — Founder, Behavioral Strategist, and Perception
-              Architect
+            <strong className="text-3xl text-white">
+              Aakashraj Ambre <br />
             </strong>
-            <br />
-            Aakashraj isn’t just a strategist — he’s a visionary who transforms
-            ideas into unforgettable identities.
+            <br />· Founder · Behavioral Strategist · Perception Architect
           </p>
 
           <p className="font-lora text-base sm:text-lg text-white mb-4 text-center sm:text-left">
-            With over a decade of expertise in advertising, celebrity marketing,
-            and human psychology, Aakashraj blends science and storytelling to
-            shape powerful identities.
+            Aakashraj blends over a decade of experience in advertising,
+            celebrity marketing, and psychology-driven strategy.
+            <br />
+            <strong>
+              BonBern is his brainchild created to help individuals and brands
+              shape how they are seen, heard, and remembered.
+            </strong>
           </p>
           <p className="font-lora text-base sm:text-lg text-white mb-4 text-center sm:text-left">
-            BonBern is more than a company — it’s Aakashraj’s mission to empower
-            people and brands to elevate their presence and control their
-            narrative.
-          </p>
-          <p className="font-lora text-base sm:text-lg italic text-white text-center sm:text-left">
-            “I don’t just solve marketing problems. I solve perception puzzles —
-            because how you're seen shapes what’s possible.”
+            From crafting iconic public personas to launching culture-shifting
+            campaigns, his approach combines{" "}
+            <strong> behavioral science, creative storytelling</strong>, and a
+            deep understanding of{" "}
+            <strong>Indian culture, tech, and media</strong>.
           </p>
         </div>
 

@@ -11,15 +11,6 @@ const OurProcess = () => {
             Our Process
           </h1>
 
-          <h2 className="text-lg sm:text-xl font-playfair text-white mb-4">
-            Every idea we shape is rooted in insight — not instinct.
-          </h2>
-
-          <p className="text-base sm:text-lg font-lora text-white leading-relaxed text-justify md:text-left mb-8">
-            Whether we’re building celebrity personas, launching brand
-            movements, or solving public challenges — here’s how we work:
-          </p>
-
           <div className="space-y-8">
             {[
               {
@@ -36,7 +27,7 @@ const OurProcess = () => {
               },
               {
                 title: "4. Develop Communication Assets",
-                text: "From content to campaigns, we build assets that are platform-fit — digital, physical, or phygital. We don’t just follow trends. We often start them.",
+                text: "From content to campaigns, we build assets that are platform-fit — digital, physical, or phygital.",
               },
               {
                 title: "5. Adapt & Amplify",
@@ -44,7 +35,7 @@ const OurProcess = () => {
               },
               {
                 title: "6. Reflect & Reinvent",
-                text: "We circle back, learn what shifted perception, and explore new opportunities. What we build today should make tomorrow smarter.",
+                text: "We circle back, learn what shifted perception, and explore new opportunities.",
               },
             ].map((item, index) => (
               <div key={index}>

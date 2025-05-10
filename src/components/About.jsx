@@ -11,17 +11,25 @@ const About = () => {
             About Us
           </h1>
 
-          <h2 className="text-lg sm:text-xl font-playfair text-white mb-4">
-            Welcome to BonBern Think Tank Studio — where strategy meets
-            psychology.
+          <h2 className="font-bold text-3xl sm:text-xl font-playfair text-white mb-4">
+            BonBern Think Tank Studio is a behavior-first consultancy.
           </h2>
 
           <p className="text-base sm:text-lg font-lora text-white leading-relaxed text-justify md:text-left">
-            We're not your typical consultancy. We understand that human
-            decisions are driven by emotion, narratives, and subconscious
-            beliefs. That's why we craft experiences that resonate, stories that
-            stick, and brands that live in people's minds. We don't just market
-            — we connect, influence, and inspire.
+            We believe the world doesn’t move on logic — it moves on{" "}
+            <strong>emotion, story, and belief</strong>. We go beyond marketing
+            — into <strong>minds, memories, and meaning</strong>. <br />
+            <br /> <span className="font-bold">Our secret?</span> <br />A mix of
+            <strong>
+              {" "}
+              psychological insight, creative storytelling, and tech-powered
+              execution
+            </strong>
+            . <br />
+            <br /> We blend{" "}
+            <strong>psychology with creativity to shape perception</strong> —
+            from <strong>celebrity image-building</strong> and{" "}
+            <strong>viral brand campaigns to solving public problems</strong>.
           </p>
         </div>
 

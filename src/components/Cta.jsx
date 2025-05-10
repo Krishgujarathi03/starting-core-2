@@ -13,25 +13,16 @@ const Cta = () => {
             </h1>
 
             <h2 className="text-lg sm:text-xl font-playfair text-white text-center sm:text-left mb-4">
-              You're not just launching a project — you’re shaping perception,
-              evoking emotion, and building something that outlasts the moment.
+              Let’s build something worth remembering.
             </h2>
 
             <p className="text-base sm:text-lg font-lora text-white leading-relaxed text-justify px-4 sm:px-0 mb-6">
-              Whether it's a bold brand, a movement with meaning, or a story
-              that cuts through the noise — we're your creative allies from day
-              one.
+              Whether you’re building an image, launching a movement, or solving
+              a perception problem — we’re here to think it through with you.
             </p>
 
-            <p className="text-base sm:text-lg font-semibold mb-6 text-center sm:text-left">
-              Ready to redefine how the world sees you?
-              <br />
-              <span className="text-white">
-                Let's build something unforgettable — together.
-              </span>
-            </p>
             <button className="mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full transition duration-300 shadow-lg">
-              Start Your Journey
+              Start a Conversation
             </button>
           </div>
 
