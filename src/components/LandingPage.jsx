@@ -1,62 +1,18 @@
-
-import anime from 'animejs/lib/anime.es.js';
-import { useEffect , useRef } from 'react';
-
 import img1 from "../assets/img1.png";
 
 const LandingPage = () => {
-
-  const containerRef = useRef(null);
-  const hasAnimated = useRef(false);
-
- useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          hasAnimated.current = true;
-
-          anime.timeline({
-            easing: 'easeOutQuart',
-            duration: 800,
-          })
-          .add({
-            targets: el.querySelectorAll('.animate-text'),
-            translateY: [50, 0],
-            opacity: [0, 1],
-            delay: anime.stagger(150),
-          })
-          .add({
-            targets: el.querySelector('.animate-img'),
-            scale: [0.8, 1],
-            opacity: [0, 1],
-            duration: 1000,
-          }, '-=400');
-
-          // observer.unobserve(el);
-        }
-      },
-      { root: null, threshold: 0.3 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-     <div id="home" ref={containerRef} className="min-h-screen bg-[#1a1a1a] text-white w-full">
+    <div id="home" className="min-h-screen bg-[#1a1a1a] text-white w-full">
       <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
         {/* Left Column */}
-        <div className="md:w-1/2 text-center md:text-left space-y-4">
-          <h1 className="opacity-0 animate-text text-xl font-avenir leading-tight">
+        <div className="md:w-1/2 text-center md:text-left">
+          <h1 className="text-xl font-avenir mb-4 leading-tight">
             We work with celebrities to build iconic images.
           </h1>
-          <h2 className="opacity-0 animate-text text-lg sm:text-xl font-playfair">
+          <h2 className="text-lg sm:text-xl font-playfair text-white mb-4">
             We work with labels and brands to craft viral campaigns.
           </h2>
-          <p className="opacity-0 animate-text text-3xl sm:text-4xl md:text-5xl font-lora font-bold">
+          <p className="text-3xl sm:text-4xl md:text-5xl font-lora text-white mb-4 font-bold">
             And in our free time, we solve real-world problems
             <br />
             <span className="text-white">
@@ -65,15 +21,14 @@ const LandingPage = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-        {/* Right Column with blur effect */}
+        {/* Right Column with medium blur and glow */}
         <div className="md:w-1/2 w-full max-w-[500px] relative">
           {/* Blurred background image */}
-          <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
+          <div className="absolute inset-0 z-0 overflow-hidden rounded-xl">
             <img
               src={img1}
               alt="blur-bg"
-              className="w-full h-full object-cover scale-110 opacity-60 brightness-[1.6] blur-3xl rounded-lg"
+              className="w-full h-full object-cover scale-105 blur-3xl opacity-60 brightness-[1.6] rounded-xl"
             />
           </div>
 
@@ -81,15 +36,7 @@ const LandingPage = () => {
           <img
             src={img1}
             alt="HeroImg"
-            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl rounded-lg"
-=======
-        {/* Right Column */}
-        <div className="md:w-1/2 w-full max-w-[500px] mt-8 md:mt-0">
-          <img
-            src={img1}
-            alt="HeroImg"
-            className="opacity-0 animate-img w-full h-auto object-contain drop-shadow-2xl rounded-lg"
->>>>>>> branch-1
+            className="relative z-10 w-full h-auto object-contain drop-shadow-xl rounded-xl"
           />
         </div>
       </div>
