@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // or any icon library
 
-import Logo from "../../assets/logo.png";
-
+import Logo from "../../assets/logo1.jpg";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,7 +16,7 @@ export default function Navbar() {
             <img
               src={Logo}
               alt="brand logo"
-              className="h-10 w-auto object-contain"
+              className="h-10 w-auto sm:h-12 object-contain"
             />
           </Link>
 
@@ -69,4 +68,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
