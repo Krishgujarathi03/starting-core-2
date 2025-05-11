@@ -71,11 +71,11 @@ const OurFounder = () => {
     <div
       ref={sectionRef}
       id="founder"
-      className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
+      className=" xs:w-[90%] xs:m-auto xs:mt-12 min-h-screen bg-[#1a1a1a] text-white w-full md:p-4"
     >
-      <div className="w-full flex flex-col sm:flex-row items-center justify-between px-6 sm:px-10 pb-10 mt-6">
+      <div className="w-full flex flex-col sm:flex-row items-center justify-between px-6 sm:px-10 md:pb-10 mt-6">
         <div className="sm:w-1/2">
-          <h2 className="animate-founder-text font-avenir text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-wide text-center sm:text-left">
+          <h2 className="animate-founder-text font-avenir text-4xl xs:text-[2.5rem] xs:font-[700] md:text-6xl font-bold mb-6 tracking-wide text-center sm:text-left">
             Meet the Visionary Behind BonBern
           </h2>
           <p className="animate-founder-text font-playfair text-lg sm:text-xl mb-8 leading-relaxed text-center sm:text-left max-w-xl">
@@ -102,7 +102,7 @@ const OurFounder = () => {
           </p>
         </div>
 
-        <div className="md:w-1/2 w-full max-w-[500px] relative mt-10 sm:mt-0">
+        <div className=" xs:w-[73%] md:w-1/2 w-full max-w-[500px] relative mt-10 sm:mt-0">
           <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
             <img
               src={founder}

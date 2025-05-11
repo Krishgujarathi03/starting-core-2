@@ -5,20 +5,20 @@ const OurProcess = () => {
   return (
     <div
       id="our-process"
-      className="min-h-screen bg-[#1a1a1a] text-white w-full px-4 sm:px-6 md:px-10 py-10"
+      className=" xs:w-[90%] xs:m-auto xs:mt-[3rem] md:min-h-screen bg-[#1a1a1a] text-white w-full md:px-10 "
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full">
         {/* Left Column: Content */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-avenir mb-4 leading-tight">
+          <h1 className="text-4xl xs:text-[2.5rem] xs:font-[700] md:text-6xl font-avenir mb-4 leading-tight">
             Our Process
           </h1>
 
-          <div className="space-y-8">
+          <div className="xs:w-[82%] xs:m-auto">
             {[
               {
                 title: "1. Understand the Brief",
-                text: "We decode what’s said, what’s unsaid, and why it matters. This is where the foundation of perception begins.",
+                text: "We decode what's said, what's unsaid, and why it matters. This is where the foundation of perception begins.",
               },
               {
                 title: "2. Decode Behavior",
@@ -41,11 +41,11 @@ const OurProcess = () => {
                 text: "We circle back, learn what shifted perception, and explore new opportunities.",
               },
             ].map((item, index) => (
-              <div key={index}>
-                <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-white mb-2">
+              <div key={index} className="xs:mb-8" >
+                <h3 className="font-playfair text-xl xs:text-[1.2rem] xs:font-[400] xs:leading-[3.4rem] text-white mb-2 ">
                   {item.title}
                 </h3>
-                <p className="font-lora text-base sm:text-lg text-white">
+                <p className="font-lora text-base xs:text-[1rem] text-white  ">
                   {item.text}
                 </p>
               </div>
@@ -54,7 +54,7 @@ const OurProcess = () => {
         </div>
 
         {/* Right Column: Image with blur effect */}
-        <div className="md:w-1/2 w-full max-w-[500px] relative">
+        <div className=" xs:w-[73%] md:w-1/2 w-full max-w-[500px] relative">
           {/* Blurred background image */}
           <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
             <img

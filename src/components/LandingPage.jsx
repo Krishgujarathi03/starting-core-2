@@ -51,18 +51,18 @@ const LandingPage = () => {
     <div
       id="home"
       ref={containerRef}
-      className="min-h-screen bg-[#1a1a1a] text-white w-full xs:pt-[8rem] "
+      className="md:min-h-screen bg-[#1a1a1a] text-white w-full xs:pt-[8rem] xs:w-[90%] xs:m-auto xs:mb- "
     >
-      <div className="flex flex-col md:flex-row items-center justify-between px-10 py-8 w-full">
+      <div className="flex flex-col md:flex-row items-center justify-between md:px-10 md:py-8 w-full">
         {/* Left Column */}
         <div className="md:w-1/2 text-center md:text-left space-y-4">
-          <h1 className="opacity-0 animate-text text-xl font-avenir leading-tight">
+          <h1 className=" xs:text-[1.5rem] xs:leading-[1.3] xs:mb-[1.5rem] opacity-0 animate-text text-xl font-avenir leading-tight">
             We work with celebrities to build iconic images.
           </h1>
-          <h2 className="opacity-0 animate-text text-lg sm:text-xl font-playfair">
+          <h2 className=" xs:text-[1.5rem] xs:leading-[1.3] xs:mb-[1.25rem] opacity-0 animate-text text-lg sm:text-xl font-playfair">
             We work with labels and brands to craft viral campaigns.
           </h2>
-          <p className="opacity-0 animate-text text-3xl sm:text-4xl md:text-5xl font-lora font-bold">
+          <p className="opacity-0 animate-text text-3xl xs:text-[1rem] xs:leading-[1.5] xs:font-[400] sm:text-4xl md:text-5xl font-lora font-bold">
             And in our free time, we solve real-world problems
             <br />
             <span className="text-white">
@@ -72,7 +72,7 @@ const LandingPage = () => {
         </div>
 
         {/* Right Column */}
-        <div className="relative w-full max-w-[500px] mt-8 md:mt-0">
+        <div className=" xs:w-[73%] relative w-full max-w-[500px] mt-8 md:mt-0">
           {/* Blurred background image */}
           <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
             <img
