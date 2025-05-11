@@ -9,7 +9,7 @@ const Cta = () => {
     >
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
           {/* Left Column: Image with blur effect */}
-          <div className="md:w-1/2 w-full max-w-[500px] relative mt-10 sm:mt-0">
+          <div className="md:w-1/2 w-full max-w-[500px] relative md:mt-10 sm:mt-0">
             {/* Blurred background image */}
             <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
               <img
@@ -28,7 +28,7 @@ const Cta = () => {
           </div>
 
           {/* Right Column: Content */}
-          <div className="sm:w-1/2">
+          <div className="sm:w-1/2 xs:text-center ">
             <h1 className="animate-cta-text text-4xl xs:text-[2.5rem] xs:font-[700] md:text-7xl font-avenir mb-4 leading-tight text-center sm:text-left text-white">
               Shape What They See
             </h1>
