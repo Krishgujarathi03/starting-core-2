@@ -9,6 +9,7 @@ import OurProcess from "./OurProcess.jsx";
 import OurClients from "./OurClients.jsx";
 import OurFounder from "./OurFounder.jsx";
 import Cta from "./Cta.jsx";
+import Footer from "./Footer.jsx";
 
 export default function Parent()
 {
@@ -22,6 +23,7 @@ export default function Parent()
                 <OurClients />
                 <OurFounder />
                 <Cta />
+                <Footer />
             </div>
         </>
     );
