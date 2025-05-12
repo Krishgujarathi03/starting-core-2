@@ -56,21 +56,23 @@ const LandingPage = () => {
       <div className="flex flex-col md:flex-row items-center justify-between md:px-10 md:py-8 w-full">
         {/* Left Column */}
         <div className="md:w-1/2 text-center md:text-left space-y-4">
-          <h1 className="
-            opacity-0 animate-text text-xl font-avenir leading-tight
+          <h1
+            className="opacity-0 animate-text text-xl font-avenir leading-tight
             xs:text-[1.5rem] xs:leading-[1.3] xs:mb-[1.5rem]
             xl:text-[2rem]  "
           >
             We work with celebrities to build iconic images.
           </h1>
-          <h2 className="
+          <h2
+            className="
             opacity-0 animate-text text-lg font-playfair
             xs:text-[1.5rem] xs:leading-[1.3] xs:mb-[1.25rem] 
             xl:text-[1.75rem]  "
           >
             We work with labels and brands to craft viral campaigns.
           </h2>
-          <p className="
+          <p
+            className="
             opacity-0 animate-text text-3xl font-lora font-bold
             xs:text-[1rem] xs:leading-[1.5] xs:font-[400] 
             md:text-5xl 
