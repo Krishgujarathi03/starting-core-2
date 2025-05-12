@@ -5,7 +5,10 @@ const OurProcess = () => {
   return (
     <div
       id="our-process"
-      className=" xs:w-[90%] xs:m-auto xs:mt-[3rem] md:min-h-screen bg-[#1a1a1a] text-white w-full md:px-10 "
+      className=" bg-[#1a1a1a] text-white w-full
+        xs:w-[90%] xs:m-auto xs:mt-[3rem] 
+        md:min-h-screen md:px-10 
+        xl:px-0 xl:mt-[4rem]"
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full">
         {/* Left Column: Content */}
@@ -14,7 +17,8 @@ const OurProcess = () => {
             Our Process
           </h1>
 
-          <div className="xs:w-[82%] xs:m-auto">
+          <div className="xs:w-[82%] xs:m-auto
+            xl:ms-0 ">
             {[
               {
                 title: "1. Understand the Brief",
@@ -45,7 +49,10 @@ const OurProcess = () => {
                 <h3 className="font-playfair text-xl xs:text-[1.2rem] xs:font-[400] xs:leading-[3.4rem] text-white mb-2 ">
                   {item.title}
                 </h3>
-                <p className="font-lora text-base xs:text-[1rem] text-white  ">
+                <p className="font-lora text-base text-white 
+                  xs:text-[1rem] 
+                  xl:text-[1.125rem]  "
+                >
                   {item.text}
                 </p>
               </div>

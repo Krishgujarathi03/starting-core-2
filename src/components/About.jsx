@@ -71,7 +71,10 @@ const About = () => {
     <div
       id="about-us"
       ref={sectionRef}
-      className=" xs:w-[90%] xs:m-auto xs:mt-[3rem] md:min-h-screen bg-[#1a1a1a] text-white w-full px-4 sm:px-6 md:px-10 md:py-10 overflow-x-hidden"
+      className=" bg-[#1a1a1a] text-white w-full overflow-x-hidden
+        xs:w-[90%] xs:m-auto xs:mt-[3rem] 
+        md:min-h-screen  md:px-10 md:py-10 
+        xl:pt-0 xl:min-h-0 "
     >
       
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
@@ -105,7 +108,11 @@ const About = () => {
           <h2 className="font-bold text-3xl xs:text-[1.25rem] xs:font-[400] font-playfair text-white mb-4">
             BonBern Think Tank Studio is a behavior-first consultancy.
           </h2>
-          <p className="text-base xs:text-[1rem] font-lora text-white leading-relaxed text-justify md:text-left">
+
+          <p className="text-base xs:text-[1rem] font-lora text-white leading-relaxed text-justify 
+            md:text-left
+            xl:text-[1.125rem]"
+          >
             We believe the world doesn't move on logic — it moves on{" "}
             <strong>emotion, story, and belief</strong>. We go beyond marketing
             — into <strong>minds, memories, and meaning</strong>. <br />
