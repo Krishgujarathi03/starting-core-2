@@ -13,7 +13,12 @@ const OurProcess = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full">
         {/* Left Column: Content */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl xs:text-[2.5rem] xs:font-[700] md:text-6xl font-avenir mb-4 leading-tight">
+
+          <h1 className="text-4xl font-avenir mb-4 leading-tight
+            xs:text-[2.5rem] xs:font-[700] 
+            md:text-6xl 
+            xl:text-[2.5rem]  "
+          >
             Our Process
           </h1>
 

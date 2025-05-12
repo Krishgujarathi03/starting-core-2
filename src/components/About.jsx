@@ -102,7 +102,11 @@ const About = () => {
           ref={textRef}
           className="md:w-1/2 text-center md:text-left mt-[2rem] "
         >
-          <h1 className=" xs:text-[2.5rem] xs:leading-[1.3rem] xs:font-[700] text-4xl sm:text-5xl md:text-6xl font-avenir mb-4 leading-tight">
+          <h1 className="text-4xl font-avenir mb-4 leading-tight
+            xs:text-[2.5rem] xs:leading-[1.3rem] xs:font-[700]  
+            md:text-6xl 
+            xl:text-[2.5rem] "
+          >
             About Us
           </h1>
           <h2 className="font-bold text-3xl xs:text-[1.25rem] xs:font-[400] font-playfair text-white mb-4">

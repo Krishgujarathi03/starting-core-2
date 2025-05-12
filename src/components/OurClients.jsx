@@ -20,9 +20,13 @@ const OurClients = () => {
   return (
     <div
       id="who-we-work-with"
-      className="xs:w-[90%] xs:m-auto xs:mt-[3rem] min-h-screen bg-[#1a1a1a] text-white w-full "
+      className=" min-h-screen bg-[#1a1a1a] text-white w-full
+        xs:w-[90%] xs:m-auto xs:mt-[3rem] 
+        xl:mt-[4rem]"
     >
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
+      <div className="flex flex-col-reverse items-center justify-between gap-10 w-full
+        md:flex-row md:items-start "
+      >
         {/* Left Column: Image with blur effect */}
         <div className=" xs:w-[73%] md:w-1/2 w-full max-w-[500px] relative">
           {/* Blurred background image */}
@@ -44,15 +48,25 @@ const OurClients = () => {
 
         {/* Right Column: Content */}
         <div className=" xs:w-[88%] md:w-1/2 2xl:pe-[2rem] xl:mt-10 md:mt-0">
-          <h1 className="text-4xl xs:text-[2.5rem] xs:text-center xs:font-[700] xs:mb-4 md:text-7xl font-avenir mb-1 leading-tight text-left text-white">
+
+          <h1 className="text-4xl font-avenir mb-1 leading-tight text-left text-white
+            xs:text-[2.5rem] xs:text-center xs:font-[700] xs:mb-4 
+            md:text-7xl  
+            xl:text-[2.5rem] xl:mb-[1rem] "
+          >
             Who We Work With
           </h1>
 
-          <h2 className="xs:text-[1.25rem] xs:font-[400] xs:mb-[0.875rem] font-playfair text-white text-left mb-4">
+          <h2 className=" font-playfair text-white text-left mb-4
+            xs:text-[1.25rem] xs:font-[400] xs:mb-[0.875rem] 
+            xl:text-[2rem] xl:mb-[0.75rem] ">
             The best partnerships are built on trust — and results.
           </h2>
 
-          <p className="text-lg font-lora text-white leading-relaxed text-justify xs:text-[1rem] xs:mb-4 mb-8 ">
+          <p className="text-lg font-lora text-white leading-relaxed text-justify 
+            xs:text-[1rem] xs:mb-4 mb-8 
+            xl:text-[1.125rem] xl:mb-[1.25rem] "
+          >
             Over the years, we've collaborated with some of the most influential
             names across music, media, and brands.
           </p>
