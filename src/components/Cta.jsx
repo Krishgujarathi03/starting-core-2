@@ -60,7 +60,10 @@ const Cta = () => {
     <div
       ref={sectionRef}
       id="get-started"
-      className=" xs:w-[90%] xs:m-auto xs:mt-12 md:min-h-screen bg-[#1a1a1a] text-white w-full md:p-4"
+      className=" bg-[#1a1a1a] text-white w-full
+        xs:w-[90%] xs:m-auto xs:mt-12 xs:mb-12
+        md:min-h-screen md:p-4
+        xl:p-0 xl:mt-16 xl:mb-16  xl:min-h-0 "
     >
       <div className="w-full">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
@@ -83,17 +86,25 @@ const Cta = () => {
 
           {/* Right Column: Content */}
           <div className="sm:w-1/2">
-            <h1 className="animate-cta-text text-4xl sm:text-5xl md:text-7xl font-avenir mb-4 leading-tight text-center sm:text-left text-white">
+            <h1 className="animate-cta-text text-4xl font-avenir mb-4 leading-tight text-center text-white
+              sm:text-5xl md:text-7xl sm:text-left 
+              xl:text-[2.5rem] xl:mb-4 ">
               Shape What They See
             </h1>
 
-            <h2 className="animate-cta-text text-lg sm:text-xl font-playfair text-white text-center sm:text-left mb-4">
-              Let’s build something worth remembering.
+            <h2 className="animate-cta-text text-lg font-playfairtext-white text-center mb-4
+              sm:text-xl sm:text-left 
+              xl:text-[2rem] xl:mb-[1.75rem] "
+            >
+              Let's build something worth remembering.
             </h2>
 
-            <p className="animate-cta-text text-base sm:text-lg font-lora text-white leading-relaxed text-justify px-4 sm:px-0 mb-6">
-              Whether you’re building an image, launching a movement, or solving
-              a perception problem — we’re here to think it through with you.
+            <p className="animate-cta-text text-base font-lora text-white leading-relaxed text-justify px-4 
+              sm:px-0 mb-6 sm:text-lg 
+              xl:text-[1.125rem]  "
+            >
+              Whether you're building an image, launching a movement, or solving
+              a perception problem — we're here to think it through with you.
             </p>
 
             <button className="animate-cta-text mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full transition duration-300 shadow-lg">
