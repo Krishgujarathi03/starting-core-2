@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import{ useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 import founder from "../assets/Founder/Founder.png";
 
@@ -71,20 +71,35 @@ const OurFounder = () => {
     <div
       ref={sectionRef}
       id="founder"
-      className=" xs:w-[90%] xs:m-auto xs:mt-12 min-h-screen bg-[#1a1a1a] text-white w-full md:p-4"
+      className=" bg-[#1a1a1a] text-white w-full
+        xs:w-[90%] xs:m-auto xs:mt-12 min-h-screen
+        md:p-4
+        xl:min-h-0 xl:p-0"
     >
       <div className="w-full flex flex-col sm:flex-row items-center justify-between px-6 sm:px-10 md:pb-10 mt-6">
         <div className="sm:w-1/2">
-          <h2 className="animate-founder-text font-avenir text-4xl xs:text-[2.5rem] xs:font-[700] md:text-6xl font-bold mb-6 tracking-wide text-center sm:text-left">
+
+          <h2 className="animate-founder-text font-avenir text-4xl font-bold mb-6 tracking-wide text-center 
+            xs:text-[2.5rem] xs:font-[700] sm:text-left
+            md:text-6xl 
+            xl:text-[2rem] xl:mb-[0.75rem] "
+          >
             Meet the Visionary Behind BonBern
           </h2>
-          <p className="animate-founder-text font-playfair text-lg sm:text-xl mb-8 leading-relaxed text-center sm:text-left max-w-xl">
-            <strong className="text-3xl">
+
+          <p className="animate-founder-text font-playfair text-lg sm:text-xl mb-8 leading-relaxed text-center sm:text-left max-w-xl
+            xl:text-[1.125rem] xl:mb-[1.25rem] "
+          >
+            <strong className="text-3xl xl:text-[1.125rem]" style={{letterSpacing : "0.3rem"}} >
               Aakashraj Ambre <br />
             </strong>
             <br />· Founder · Behavioral Strategist · Perception Architect
           </p>
-          <p className="animate-founder-text font-lora text-base sm:text-lg mb-4 text-center sm:text-left">
+
+          <p className="animate-founder-text font-lora text-base mb-4 text-center
+            sm:text-lg sm:text-left
+            xl:text-[1.125rem] "
+          >
             Aakashraj blends over a decade of experience in advertising,
             celebrity marketing, and psychology-driven strategy.
             <br />

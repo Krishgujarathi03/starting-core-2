@@ -22,7 +22,7 @@ const OurClients = () => {
       id="who-we-work-with"
       className=" min-h-screen bg-[#1a1a1a] text-white w-full
         xs:w-[90%] xs:m-auto xs:mt-[3rem] 
-        xl:mt-[4rem]"
+        xl:mt-[4rem] xl:min-h-0 "
     >
       <div className="flex flex-col-reverse items-center justify-between gap-10 w-full
         md:flex-row md:items-start "
