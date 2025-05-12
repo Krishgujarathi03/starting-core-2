@@ -16,8 +16,13 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-start gap-8 border-l-2 border-orange-500 pl-6">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <FaPhone className="text-orange-500" />
-              <span>9819334567</span>
+              <a
+                href="tel:9819334567"
+                className="flex items-center gap-3 hover:underline text-gray-300"
+              >
+                <FaPhone className="text-orange-500" />
+                9819334567
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-orange-500" />
