@@ -60,7 +60,7 @@ const Cta = () => {
     <div
       ref={sectionRef}
       id="get-started"
-      className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
+      className=" xs:w-[90%] xs:m-auto xs:mt-12 md:min-h-screen bg-[#1a1a1a] text-white w-full md:p-4"
     >
       <div className="w-full">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">

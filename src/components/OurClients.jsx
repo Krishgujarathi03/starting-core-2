@@ -1,4 +1,4 @@
-import React from "react";
+
 import img1 from "../assets/OurClients/ourClients.png";
 
 const partners = [
@@ -20,11 +20,11 @@ const OurClients = () => {
   return (
     <div
       id="who-we-work-with"
-      className="min-h-screen bg-[#1a1a1a] text-white w-full p-4"
+      className="xs:w-[90%] xs:m-auto xs:mt-[3rem] min-h-screen bg-[#1a1a1a] text-white w-full "
     >
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
         {/* Left Column: Image with blur effect */}
-        <div className="md:w-1/2 w-full max-w-[500px] relative">
+        <div className=" xs:w-[73%] md:w-1/2 w-full max-w-[500px] relative">
           {/* Blurred background image */}
           <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
             <img
@@ -43,21 +43,21 @@ const OurClients = () => {
         </div>
 
         {/* Right Column: Content */}
-        <div className="md:w-1/2 2xl:pe-[2rem] mt-10 md:mt-0">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-avenir mb-1 leading-tight text-left text-white">
+        <div className=" xs:w-[88%] md:w-1/2 2xl:pe-[2rem] xl:mt-10 md:mt-0">
+          <h1 className="text-4xl xs:text-[2.5rem] xs:text-center xs:font-[700] xs:mb-4 md:text-7xl font-avenir mb-1 leading-tight text-left text-white">
             Who We Work With
           </h1>
 
-          <h2 className="font-bold text-xl font-playfair text-white text-left mb-4">
+          <h2 className="xs:text-[1.25rem] xs:font-[400] xs:mb-[0.875rem] font-playfair text-white text-left mb-4">
             The best partnerships are built on trust — and results.
           </h2>
 
-          <p className="text-lg font-lora text-white leading-relaxed text-justify mb-8">
+          <p className="text-lg font-lora text-white leading-relaxed text-justify xs:text-[1rem] xs:mb-4 mb-8 ">
             Over the years, we've collaborated with some of the most influential
             names across music, media, and brands.
           </p>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 xs:text-center md:grid-cols-3 gap-6">
             {partners.map((group) => (
               <div key={group.title}>
                 <h3 className="text-2xl font-semibold text-white border-b-2 border-gray-500 inline-block pb-2 mb-3">
