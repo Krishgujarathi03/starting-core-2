@@ -83,7 +83,11 @@ const OurClients = () => {
             Who We Work With
           </h1>
 
-          <h2 className="xs:text-[1.25rem] xs:font-[400] xs:mb-[0.875rem] font-playfair text-white text-left mb-4">
+          <h2
+            className=" font-playfair text-white text-left mb-4
+            xs:text-[1.25rem] xs:font-[400] xs:mb-[0.875rem] 
+            xl:text-[2rem] xl:mb-[0.75rem] "
+          >
             The best partnerships are built on trust — and results.
           </h2>
 
