@@ -13,11 +13,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <img
-              src={Logo}
-              alt="brand logo"
-              className="h-10 w-auto sm:h-12 object-contain"
-            />
+            <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center overflow-hidden">
+              <img
+                src={Logo}
+                alt="brand logo"
+                className="h-full w-full object-contain"
+              />
+            </div>
           </Link>
 
           <div className="relative">
