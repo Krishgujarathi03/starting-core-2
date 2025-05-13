@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
 import { Music, Disc, Briefcase } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 import img1 from "../assets/OurClients/ourClients.png";
 
 import BadshahImg from "../assets/artists/1.png";
@@ -109,12 +112,10 @@ const OurClients = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            runAnimations();
-          }
+          if (entry.isIntersecting) runAnimations();
         });
       },
-      { threshold: 0.2 } // trigger when 20% of the section is visible
+      { threshold: 0.2 }
     );
 
     const currentSection = sectionRef.current;
@@ -163,8 +164,8 @@ const OurClients = () => {
             names across music, media, and brands.
           </p>
 
-          {/* Columns */}
-          <div className="flex flex-row gap-4 w-full">
+          {/* Responsive layout */}
+          <div className="hidden md:flex flex-row gap-4 w-full">
             {partners.map((group, groupIndex) => (
               <div
                 key={group.title}
@@ -196,6 +197,54 @@ const OurClients = () => {
                 </ul>
               </div>
             ))}
+          </div>
+
+          {/* Swiper for mobile */}
+          <div className="md:hidden">
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={1.2}
+              grabCursor
+              className="mt-4"
+            >
+              {partners.map((group) => (
+                <SwiperSlide key={group.title}>
+                  <div
+                    className="bg-[#2a2a2a] p-4 rounded-xl text-center shadow-md opacity-0"
+                    ref={setCardRef}
+                  >
+                    <div className="flex items-center justify-center mb-3 text-white">
+                      <div ref={setIconRef}>{group.icon}</div>
+                    </div>
+                    <h3 className="text-base sm:text-lg font-semibold text-white border-b border-gray-500 pb-2 mb-3">
+                      {group.title}
+                    </h3>
+                    <ul className="space-y-3 text-white text-sm sm:text-base">
+                      {group.items.map(({ name, img }) => (
+                        <li
+                          key={name}
+                          className="flex flex-col items-center gap-1"
+                        >
+                          <div
+                            ref={setImageRef}
+                            className="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center p-1"
+                          >
+                            <img
+                              src={img}
+                              alt={name}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <span className="text-[0.7rem] text-center">
+                            {name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
