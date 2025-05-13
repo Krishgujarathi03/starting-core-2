@@ -61,14 +61,14 @@ const Cta = () => {
       ref={sectionRef}
       id="get-started"
       className=" bg-[#1a1a1a] text-white w-full
-        xs:w-[90%] xs:m-auto xs:mt-12 xs:mb-12
+        xs:w-[80%] xs:m-auto xs:mt-12 xs:mb-12
         md:min-h-screen md:p-4
         xl:p-0 xl:mt-16 xl:mb-16  xl:min-h-0 "
     >
       <div className="w-full">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
           {/* Left Column: Image with blur effect */}
-          <div className="md:w-1/2 w-full max-w-[500px] relative mt-10 sm:mt-0">
+          <div className=" xs:w-[73%] md:w-1/2 w-full max-w-[500px] relative mt-10 sm:mt-0">
             <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
               <img
                 src={ctaImg}

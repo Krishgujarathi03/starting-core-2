@@ -94,8 +94,8 @@ export default function OurProcess() {
     <div
       id="our-process"
       ref={containerRef}
-      className="bg-[#1a1a1a] text-white w-full
-                 xs:w-[90%] xs:m-auto xs:mt-[3rem] 
+      className="overflow-x-hidden bg-[#1a1a1a] text-white w-full
+                 xs:w-[80%] xs:m-auto xs:mt-[3rem] 
                  md:min-h-screen md:px-10 
                  xl:px-0 xl:mt-[4rem]"
     >

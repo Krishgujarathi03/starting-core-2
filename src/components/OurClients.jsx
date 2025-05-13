@@ -58,7 +58,7 @@ const OurClients = () => {
   return (
     <div
       id="who-we-work-with"
-      className="xs:w-[90%] xs:m-auto xs:mt-[3rem] min-h-screen bg-[#1a1a1a] text-white w-full"
+      className="xs:w-[80%] xs:m-auto xs:mt-[3rem] min-h-screen bg-[#1a1a1a] text-white w-full"
     >
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
         {/* Left Column: Image */}
