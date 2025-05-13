@@ -72,7 +72,7 @@ const OurFounder = () => {
       ref={sectionRef}
       id="founder"
       className=" bg-[#1a1a1a] text-white w-full
-        xs:w-[90%] xs:m-auto xs:mt-12 min-h-screen
+        xs:w-[80%] xs:m-auto xs:mt-12 min-h-screen
         md:p-4
         xl:min-h-0 xl:p-0"
     >
