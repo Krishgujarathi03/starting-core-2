@@ -72,7 +72,7 @@ const About = () => {
       id="about-us"
       ref={sectionRef}
       className=" bg-[#1a1a1a] text-white w-full overflow-x-hidden
-        xs:w-[90%] xs:m-auto xs:mt-[3rem] 
+        xs:w-[80%] xs:m-auto xs:mt-[3rem] 
         md:min-h-screen  md:px-10 md:py-10 
         xl:pt-0 xl:min-h-0 "
     >
