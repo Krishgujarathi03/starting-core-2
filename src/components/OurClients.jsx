@@ -71,22 +71,34 @@ const OurClients = () => {
         </div>
 
         {/* Content Section */}
-        <div className="xs:w-[88%] md:w-1/2 2xl:pe-[2rem] xl:mt-10 md:mt-0">
-          <h1 className="text-4xl xs:text-[2.5rem] xs:text-center xs:font-[700] xs:mb-4 md:text-7xl font-avenir mb-1 leading-tight text-left text-white">
+        <div className="xs:w-[88%] md:w-1/2 2xl:pe-[2rem] md:mt-0">
+
+          <h1 className="text-4xl font-avenir mb-1 leading-tight text-left text-white
+            xs:text-[2.5rem] xs:text-center xs:font-[700] xs:mb-4 md:text-7xl 
+            lg:text-[2.5rem]  "
+          >
             Who We Work With
           </h1>
 
-          <h2 className="font-playfair text-white text-left mb-4 xs:text-[1.25rem] xs:font-[400] xs:mb-[0.875rem] xl:text-[2rem] xl:mb-[0.75rem]">
+          <h2 className="font-playfair text-white text-left mb-4 xs:text-[1.25rem] 
+            xs:font-[400] xs:mb-[0.875rem] 
+            xl:text-[1.25rem] xl:mb-[0.75rem]"
+          >
             The best partnerships are built on trust — and results.
           </h2>
 
-          <p className="text-lg font-lora text-white leading-relaxed text-justify xs:text-[1rem] xs:mb-4 mb-8">
+          <p className="text-lg font-lora text-white leading-relaxed text-justify 
+            xs:text-[1rem] xs:mb-4 mb-8 xs:tracking-[0.2rem]
+            xl:tracking-[0.3rem]  "
+          >
             Over the years, we've collaborated with some of the most influential
             names across music, media, and brands.
           </p>
 
           {/* Slider */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center
+            xs:mt-[5rem]
+            xl:mt-[10rem] ">
             <AnimatePresence mode="wait">
               <motion.div
                 key={startIndex}
