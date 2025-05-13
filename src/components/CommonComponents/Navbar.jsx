@@ -8,24 +8,27 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="border-b border-gray-500 bg-[#1a1a1a] fixed w-full z-20 ">
+    <nav className="border-b border-gray-500 bg-[#1a1a1a] fixed w-full z-20 pt-4">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
+          {" "}
+          {/* Adjusted height here */}
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center overflow-hidden">
+          <Link to="/" className="flex-shrink-0 mb-4">
+            <div className="h-20 w-20 rounded-full bg-white flex items-center justify-center overflow-hidden">
+              {" "}
+              {/* Adjusted size here */}
               <img
                 src={Logo}
                 alt="brand logo"
-                className="h-full w-full object-contain"
+                className="h-full w-full object-contain py-2"
               />
             </div>
           </Link>
-
           <div className="relative">
             {/* Hamburger (mobile) */}
             <button
-              className="lg:hidden p-2 rounded-md  focus:outline-none"
+              className="lg:hidden p-2 rounded-md focus:outline-none"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >

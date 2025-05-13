@@ -1,139 +1,60 @@
-import { useEffect, useRef } from "react";
-import anime from "animejs";
-import { Music, Disc, Briefcase } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
+// Import your images
 import img1 from "../assets/OurClients/ourClients.png";
-
 import BadshahImg from "../assets/artists/1.png";
 import SunidhiImg from "../assets/artists/2.png";
 import JasleenImg from "../assets/artists/3.png";
 import TanishkImg from "../assets/artists/4.png";
-
 import UMGImg from "../assets/labels/1.png";
 import SaregamaImg from "../assets/labels/2.png";
 import TSeriesImg from "../assets/labels/3.png";
 import ArtisteImg from "../assets/labels/4.png";
-
 import SonyLivImg from "../assets/brands/1.png";
 import DiscoveryImg from "../assets/brands/2.png";
 import HTImg from "../assets/brands/3.png";
 import NobelImg from "../assets/brands/4.png";
 
-const partners = [
-  {
-    title: "Artists",
-    icon: <Music size={28} />,
-    items: [
-      { name: "Badshah", img: BadshahImg },
-      { name: "Sunidhi Chauhan", img: SunidhiImg },
-      { name: "Jasleen Royal", img: JasleenImg },
-      { name: "Tanishk Bagchi", img: TanishkImg },
-    ],
-  },
-  {
-    title: "Labels",
-    icon: <Disc size={28} />,
-    items: [
-      { name: "UMG", img: UMGImg },
-      { name: "Saregama", img: SaregamaImg },
-      { name: "T-Series", img: TSeriesImg },
-      { name: "Artiste First", img: ArtisteImg },
-    ],
-  },
-  {
-    title: "Brands",
-    icon: <Briefcase size={28} />,
-    items: [
-      { name: "SonyLiv", img: SonyLivImg },
-      { name: "Discovery", img: DiscoveryImg },
-      { name: "Hindustan Times", img: HTImg },
-      { name: "Nobel Chemist", img: NobelImg },
-    ],
-  },
+const images = [
+  BadshahImg,
+  SunidhiImg,
+  JasleenImg,
+  TanishkImg,
+  UMGImg,
+  SaregamaImg,
+  TSeriesImg,
+  ArtisteImg,
+  SonyLivImg,
+  DiscoveryImg,
+  HTImg,
+  NobelImg,
 ];
 
 const OurClients = () => {
-  const sectionRef = useRef(null);
-  const iconRefs = useRef([]);
-  const cardRefs = useRef([]);
-  const imageRefs = useRef([]);
+  const [startIndex, setStartIndex] = useState(0);
+  const visibleImages = images.slice(startIndex, startIndex + 3);
 
-  iconRefs.current = [];
-  cardRefs.current = [];
-  imageRefs.current = [];
+  const handleNext = () => {
+    if (startIndex < images.length - 3) {
+      setStartIndex((prev) => prev + 3);
+    }
+  };
 
-  const setIconRef = (el) =>
-    el && !iconRefs.current.includes(el) && iconRefs.current.push(el);
-  const setCardRef = (el) =>
-    el && !cardRefs.current.includes(el) && cardRefs.current.push(el);
-  const setImageRef = (el) =>
-    el && !imageRefs.current.includes(el) && imageRefs.current.push(el);
-
-  useEffect(() => {
-    const runAnimations = () => {
-      anime({
-        targets: cardRefs.current,
-        translateY: [50, 0],
-        opacity: [0, 1],
-        delay: anime.stagger(200),
-        easing: "easeOutBack",
-        duration: 1000,
-      });
-
-      anime({
-        targets: iconRefs.current,
-        rotate: [0, 360],
-        opacity: [0, 1],
-        easing: "easeInOutSine",
-        duration: 1500,
-      });
-
-      anime({
-        targets: imageRefs.current,
-        translateY: [
-          { value: -12, duration: 300 },
-          { value: 0, duration: 300 },
-        ],
-        scale: [
-          { value: 1.05, duration: 300 },
-          { value: 1.0, duration: 300 },
-        ],
-        boxShadow: [
-          { value: "0 0 10px #ffffffaa", duration: 300 },
-          { value: "0 0 0px #ffffff00", duration: 300 },
-        ],
-        delay: anime.stagger(100, { start: 500 }),
-        easing: "easeOutElastic(1, .8)",
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) runAnimations();
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    const currentSection = sectionRef.current;
-    if (currentSection) observer.observe(currentSection);
-
-    return () => {
-      if (currentSection) observer.unobserve(currentSection);
-    };
-  }, []);
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex((prev) => prev - 3);
+    }
+  };
 
   return (
     <div
-      ref={sectionRef}
       id="who-we-work-with"
       className="xs:w-[90%] xs:m-auto xs:mt-[3rem] min-h-screen bg-[#1a1a1a] text-white w-full"
     >
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
-        {/* Image */}
+        {/* Image Section */}
         <div className="xs:w-[73%] md:w-1/2 w-full max-w-[500px] relative">
           <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
             <img
@@ -149,7 +70,7 @@ const OurClients = () => {
           />
         </div>
 
-        {/* Content */}
+        {/* Content Section */}
         <div className="xs:w-[88%] md:w-1/2 2xl:pe-[2rem] xl:mt-10 md:mt-0">
           <h1 className="text-4xl xs:text-[2.5rem] xs:text-center xs:font-[700] xs:mb-4 md:text-7xl font-avenir mb-1 leading-tight text-left text-white">
             Who We Work With
@@ -164,87 +85,49 @@ const OurClients = () => {
             names across music, media, and brands.
           </p>
 
-          {/* Responsive layout */}
-          <div className="hidden md:flex flex-row gap-4 w-full">
-            {partners.map((group, groupIndex) => (
-              <div
-                key={group.title}
-                className="w-1/3 bg-[#2a2a2a] p-3 sm:p-4 rounded-xl text-center shadow-md opacity-0"
-                ref={setCardRef}
+          {/* Slider */}
+          <div className="flex flex-col items-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={startIndex}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.4 }}
+                className="flex justify-center gap-6 mb-4"
               >
-                <div className="flex items-center justify-center mb-3 text-white">
-                  <div ref={setIconRef}>{group.icon}</div>
-                </div>
-                <h3 className="text-base sm:text-lg font-semibold text-white border-b border-gray-500 pb-2 mb-3">
-                  {group.title}
-                </h3>
-                <ul className="space-y-3 text-white text-sm sm:text-base">
-                  {group.items.map(({ name, img }) => (
-                    <li key={name} className="flex flex-col items-center gap-1">
-                      <div
-                        ref={setImageRef}
-                        className="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center p-1"
-                      >
-                        <img
-                          src={img}
-                          alt={name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <span className="text-[0.7rem] text-center">{name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Swiper for mobile */}
-          <div className="md:hidden">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={1.2}
-              grabCursor
-              className="mt-4"
-            >
-              {partners.map((group) => (
-                <SwiperSlide key={group.title}>
+                {visibleImages.map((img, index) => (
                   <div
-                    className="bg-[#2a2a2a] p-4 rounded-xl text-center shadow-md opacity-0"
-                    ref={setCardRef}
+                    key={index}
+                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full overflow-hidden bg-white flex items-center justify-center p-2"
                   >
-                    <div className="flex items-center justify-center mb-3 text-white">
-                      <div ref={setIconRef}>{group.icon}</div>
-                    </div>
-                    <h3 className="text-base sm:text-lg font-semibold text-white border-b border-gray-500 pb-2 mb-3">
-                      {group.title}
-                    </h3>
-                    <ul className="space-y-3 text-white text-sm sm:text-base">
-                      {group.items.map(({ name, img }) => (
-                        <li
-                          key={name}
-                          className="flex flex-col items-center gap-1"
-                        >
-                          <div
-                            ref={setImageRef}
-                            className="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center p-1"
-                          >
-                            <img
-                              src={img}
-                              alt={name}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                          <span className="text-[0.7rem] text-center">
-                            {name}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
+                    <img
+                      src={img}
+                      alt={`Partner ${index}`}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Navigation Icons */}
+            <div className="flex gap-6">
+              <button
+                onClick={handlePrev}
+                disabled={startIndex === 0}
+                className="p-2 bg-white text-black rounded-full shadow-md disabled:opacity-30 transition hover:scale-105"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={startIndex >= images.length - 3}
+                className="p-2 bg-white text-black rounded-full shadow-md disabled:opacity-30 transition hover:scale-105"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
